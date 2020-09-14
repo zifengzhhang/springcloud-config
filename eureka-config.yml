@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  prot: 7001
+spring:
+  profiles: dev
+# eureka 配置
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    register-with-eureka: false  # 是否向注册中心注册自己
+    fetch-registry: false #fetch-registry 如果为false表示自己为注册中心
+    service-url:  # 单机配置http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      
+ 
+ ---
+server:
+  prot: 7002
+spring:
+  profiles: test
+# eureka 配置
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    register-with-eureka: false  # 是否向注册中心注册自己
+    fetch-registry: false #fetch-registry 如果为false表示自己为注册中心
+    service-url:  # 单机配置http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
