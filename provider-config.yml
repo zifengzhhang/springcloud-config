@@ -15,8 +15,8 @@ mybatis:
 
 # spring的配置
 spring:
-  application:
   profiles: dev
+  application:
     name: springcloud-provider-dept   # 前提服务名称一样
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -52,8 +52,8 @@ mybatis:
 
 # spring的配置
 spring:
-  application:
   profiles: test
+  application:
     name: springcloud-provider-dept   # 前提服务名称一样
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
